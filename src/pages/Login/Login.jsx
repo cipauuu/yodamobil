@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import LoginCard from "./LoginCard";
+import LoginTopHeader from "../Login/LoginTopHeader";
 import styled from "styled-components";
 
 const ContainerP = styled(Container)`
@@ -12,7 +13,9 @@ const Login = () => {
     <ContainerP fluid>
       <Row>
         <LoginCard />
-        <Col>2 of 2</Col>
+        <Col className="mt-5 text-center">
+            <LoginTopHeader />
+        </Col>
       </Row>
     </ContainerP>
   );
