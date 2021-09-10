@@ -15,12 +15,12 @@ const SubTitle = styled.p`
   margin-top: 5px;
 `;
 
-const LoginTopHeader = () => {
+const LoginTopHeader = (props) => {
   return (
     <div>
       <img src={logo} alt="" />
-      <Title>Daftar untuk memulai</Title>
-      <SubTitle>Masukan detail untuk melanjutkan</SubTitle>
+      <Title>{props.title}</Title>
+      <SubTitle>{props.subtitle}</SubTitle>
     </div>
   );
 };

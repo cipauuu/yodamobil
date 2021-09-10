@@ -14,7 +14,10 @@ const Login = () => {
       <Row>
         <LoginCard />
         <Col className="mt-5 text-center">
-            <LoginTopHeader />
+          <LoginTopHeader
+            title={"Masuk ke akun Anda"}
+            subtitle={"Masukan detail untuk melanjutkan"}
+          />
         </Col>
       </Row>
     </ContainerP>

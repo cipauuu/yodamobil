@@ -14,7 +14,10 @@ const Register = () => {
       <Row>
         <LoginCard />
         <Col className="mt-5 text-center">
-            <LoginTopHeader />
+          <LoginTopHeader
+            title={"Daftar untuk memulai"}
+            subtitle={"Masukan detail untuk melanjutkan"}
+          />
         </Col>
       </Row>
     </ContainerP>
