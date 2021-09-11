@@ -31,7 +31,7 @@ export const Card = styled(Col)`
 
 export const Hero = styled.div`
   background: url("/assets/yodahero.png");
-  height: 86vh;
+  height: 90%;
 `;
 
 export const Chip = styled.div`
