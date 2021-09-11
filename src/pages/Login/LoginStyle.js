@@ -40,6 +40,7 @@ export const Chip = styled.div`
   justify-content: space-between;
   padding: 12px 94px;
   align-items: center;
+  height: 10%;
 `;
 
 export const Typo = styled.p`
