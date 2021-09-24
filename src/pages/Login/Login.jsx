@@ -13,8 +13,11 @@ const Login = () => {
   return (
     <ContainerP fluid>
       <Row>
+        <Col xs={6}>
         <LoginCard login={true} />
-        <Col className="mt-5 text-center">
+        </Col>
+        
+        <Col xs={6} className="mt-5 text-center">
           <LoginTopHeader
             title={"Masuk ke akun Anda"}
             subtitle={"Masukan detail untuk melanjutkan"}

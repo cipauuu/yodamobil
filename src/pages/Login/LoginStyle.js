@@ -1,4 +1,4 @@
-import { Col, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import styled from "styled-components";
 
 export const Title = styled.p`
@@ -14,24 +14,15 @@ export const SubTitle = styled.p`
   margin-top: 5px;
 `;
 
-export const Card = styled(Col)`
-  display: flex;
-  flex-direction: column;
-  border-radius: 16px;
-  height: calc(100vh - 32px);
-  background-color: #78c2b4;
-  padding: 0;
-  h1 {
-    font-weight: 700;
-    color: #ffffff;
-    margin: 200px 90px;
-    font-size: 64px;
-  }
+export const Kartu = styled.div`
+  width:18rem;
 `;
 
 export const Hero = styled.div`
   background: url("/assets/yodahero.png");
   height: 90%;
+  mix-blend-mode: luminosity;
+opacity: 0.49;
 `;
 
 export const Chip = styled.div`

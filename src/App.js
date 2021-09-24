@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Homepage from "./pages/Homepage/Homepage";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./bootstrap.css";
 
 function App() {
   return (

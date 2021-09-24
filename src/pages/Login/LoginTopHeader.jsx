@@ -4,7 +4,7 @@ import { Title, SubTitle } from "./LoginStyle";
 
 const LoginTopHeader = ({ title, subtitle }) => {
   return (
-    <div>
+    <div className="mt-4">
       <img src={logo} alt="" />
       <Title>{title}</Title>
       <SubTitle>{subtitle}</SubTitle>

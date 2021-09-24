@@ -12,10 +12,13 @@ const Register = () => {
   return (
     <ContainerP fluid>
       <Row>
-        <LoginCard />
-        <Col className="mt-5 text-center">
+        <Col xs={6}>
+          <LoginCard login={false} />
+        </Col>
+
+        <Col xs={6} className="mt-5 text-center">
           <LoginTopHeader
-            title={"Daftar untuk memulai"}
+            title={"Masuk ke akun Anda"}
             subtitle={"Masukan detail untuk melanjutkan"}
           />
         </Col>
