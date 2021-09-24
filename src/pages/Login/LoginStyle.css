@@ -35,3 +35,16 @@
   background: #203756;
   border-color: #203756;
 }
+
+.judul {
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 28px;
+  margin-bottom: 0px;
+}
+
+.sub-judul{
+  color: #9a9ea7;
+  font-size: 14px;
+  margin-top: 5px;
+}

@@ -4,6 +4,7 @@ import LoginCard from "./LoginCard";
 import LoginTopHeader from "../Login/LoginTopHeader";
 import styled from "styled-components";
 import LoginInputForm from "./LoginInputForm";
+import "./LoginStyle.css";
 
 const ContainerP = styled(Container)`
   padding: 8px 24px;

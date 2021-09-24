@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
-import "./LoginStyle.css";
 
 const LoginCard = ({ login }) => {
   const directPage = () => {
