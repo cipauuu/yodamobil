@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const ContainerP = styled(Container)`
   padding: 8px 24px;
@@ -12,8 +12,8 @@ const Homepage = () => {
     <ContainerP fluid>
       <Row>
         <Col>
-        <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
         </Col>
       </Row>
     </ContainerP>

@@ -1,16 +1,20 @@
-.card{
-  border:0!important;
+a:hover {
+  text-decoration: none !important;
 }
 
-.bg{
+.card {
+  border: 0 !important;
+}
+
+.bg {
   background: #203756;
-  position:static;
+  position: static;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.body-card{
-  background: #78C2B4;
+.body-card {
+  background: #78c2b4;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
@@ -32,8 +36,8 @@
 
 .tombol {
   width: 116px;
-  background: #203756!important;
-  border-color: #203756!important;
+  background: #203756 !important;
+  border-color: #203756 !important;
 }
 
 .judul {
@@ -43,41 +47,41 @@
   margin-bottom: 0px;
 }
 
-.sub-judul{
+.sub-judul {
   color: #9a9ea7;
   font-size: 14px;
   margin-top: 5px;
 }
 
-.SignInBtn {
+.sign-btn {
   margin: 12px 0;
   height: 50px;
   width: 100%;
-  background: #78c2b4;
-  border-radius: 10px;
-  border: none;
+  background: #78c2b4 !important;
+  border-radius: 10px !important;
+  border: #78c2b4 !important;
   font-weight: 600;
   color: white;
 }
 
-.SignInBtn:hover {
+.sign-btn:hover {
   background: #78c2b4;
 }
 
-.Line {
+.line {
   border: 1px solid #ececf2;
   height: 1px;
   width: 40%;
 }
 
-.Flex {
+.flex {
   display: flex;
   width: auto;
   justify-content: space-between;
   align-items: center;
 }
 
-.Flex span {
+.flex span {
   border: none;
   background: none;
 }
@@ -119,14 +123,14 @@
   border: none;
 }
 
-.clearPass{
+.clear-pass {
   cursor: pointer;
 }
 
-.TypoBold{
+.typo-bold {
   margin: auto 0;
   font-weight: 600;
-  color: #0D0A19;
+  color: #0d0a19;
   font-size: 14px;
 }
 
