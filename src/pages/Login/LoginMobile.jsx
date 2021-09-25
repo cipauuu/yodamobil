@@ -1,7 +1,9 @@
 import React from "react";
 
 const LoginMobile = () => {
-  return <div></div>;
+  return <div>
+    ini tampilan isMobile
+  </div>;
 };
 
 export default LoginMobile;

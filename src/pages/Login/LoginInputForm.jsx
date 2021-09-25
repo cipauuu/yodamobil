@@ -1,123 +1,46 @@
 import React from "react";
-import { InputGroup, FormControl, Button } from "react-bootstrap";
+import { Container, InputGroup, FormControl, Button } from "react-bootstrap";
 import Img from "../../components/Img/Img";
-import styled from "styled-components";
-
-const Container = styled.div`
-  width: 50%;
-  margin: auto;
-`;
-
-const SignInBtn = styled(Button)`
-  margin: 12px 0;
-  height: 50px;
-  width: 100%;
-  background: #78c2b4;
-  border-radius: 10px;
-  border: none;
-  font-weight: 600;
-
-  :hover {
-    background: #78c2b4;
-  }
-`;
-
-const Line = styled.div`
-  border: 1px solid #ececf2;
-  height: 1px;
-  width: 40%;
-`;
-
-const Flex = styled.div`
-  display: flex;
-  width: ${(props) => props.width || "auto"};
-  justify-content: ${(props) => props.justifyContent || "space-between"};
-  align-items: center;
-
-  span {
-    border: none;
-    background: none;
-  }
-`;
-
-const Wrapper = styled.div`
-  height: ${(props) => props.height || "auto"};
-  background: #ffffff;
-  border: ${(props) => props.border || "1px solid #e4e6e8"};
-  box-sizing: border-box;
-  border-radius: 8px;
-  padding: 4px 12px;
-  margin-bottom: 12px;
-  p {
-    text-align: left;
-    padding: 0.375rem 0.75rem;
-    font-size: 12px;
-    margin-bottom: -8px;
-    color: #9a9ea7;
-  }
-  input {
-    border: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    background: none;
-    :focus {
-      border: none;
-      background: none;
-      box-shadow: none;
-    }
-  }
-  span {
-    background: none;
-    border: none;
-  }
-`;
-
-const TypoBold = styled.p`
-  margin: auto 0;
-  font-weight: 600;
-  color: ${(props) => props.color || "#0D0A19"};
-  font-size: ${(props) => props.fontSize || "14px"};
-`;
-
-const Typo = styled.p`
-  margin: auto;
-  color: #9a9ea7;
-  font-size: ${(props) => props.fontSize || "14px"};
-`;
 
 const LoginInputForm = () => {
+  const clearPassword = () => {
+    document.getElementById("inputPass").value="";
+  }
+
   return (
-    <Container>
-      <Wrapper>
+    <Container style={{ width: "70%" }}>
+      <div className="wrapper">
         <p>Email</p>
         <InputGroup>
-          <FormControl placeholder="mahendrawisnu@me.com" />
+          <FormControl placeholder="mahendrawisnu@me.com" type="email"/>
           <InputGroup.Text>
             <Img src="/assets/ic_email.svg" />
           </InputGroup.Text>
         </InputGroup>
-      </Wrapper>
-      <Wrapper>
+      </div>
+      <div className="wrapper">
         <p>Password</p>
         <InputGroup>
-          <FormControl placeholder="qwerty123" />
+          <FormControl placeholder="qwerty123" type="password" id="inputPass"/>
           <InputGroup.Text>
-            <Img src="/assets/ic_clear.svg" />
+            <Img src="/assets/ic_clear.svg" onClick={clearPassword} className="clearPass"/>
           </InputGroup.Text>
         </InputGroup>
-      </Wrapper>
-      <Flex>
-        <Flex>
-          <InputGroup.Radio /> <TypoBold>Ingat Saya</TypoBold>
-        </Flex>
-        <TypoBold color="#78C2B4">Pulihkan Password</TypoBold>
-      </Flex>
-      <SignInBtn>Masuk</SignInBtn>
+      </div>
+      <div className="Flex">
+        <div className="Flex">
+          <InputGroup.Radio /> <p className="TypoBold">Ingat Saya</p>
+        </div>
+        <p className="TypoBold" style={{ color: "#78C2B4" }}>
+          Pulihkan Password
+        </p>
+      </div>
+      <Button className="SignInBtn">Masuk</Button>
 
-      <Flex>
-        <Line /> <Typo>Atau</Typo> <Line />
-      </Flex>
+      <div className="Flex">
+        <div className="Line" /> <p className="typo">Atau</p>{" "}
+        <div className="Line" />
+      </div>
     </Container>
   );
 };
