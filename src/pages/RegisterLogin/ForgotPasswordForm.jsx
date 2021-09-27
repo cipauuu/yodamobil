@@ -11,7 +11,7 @@ import Img from "../../components/Img/Img";
 
 const ForgotPasswordForm = () => {
   return (
-    <Container style={{ width: "70%" }} className="text-center">
+    <Container className="text-center con">
       <Row>
         <Col>
           <img
@@ -20,8 +20,7 @@ const ForgotPasswordForm = () => {
             style={{ marginTop: "15vh" }}
           />
           <p className="judul" style={{ fontSize: "28px" }}>
-            Lupa password Anda? <br />
-            Masukan detail untuk melanjutkan
+            Lupa password Anda?
           </p>
           <p className="sub-judul">Masukan detail untuk melanjutkan</p>
         </Col>
@@ -35,7 +34,7 @@ const ForgotPasswordForm = () => {
           </InputGroup.Text>
         </InputGroup>
       </div>
-      <Button className="sign-btn">Pulihkan</Button>
+      <Button className="sign-btn sbm">Pulihkan</Button>
     </Container>
   );
 };
