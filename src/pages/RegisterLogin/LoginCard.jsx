@@ -12,7 +12,6 @@ const LoginCard = ({ login }) => {
         <Card.Img
           variant="top"
           src="/assets/yodahero.png"
-          style={{ height: "80vh" }}
           className="card-image"
         />
       </div>
