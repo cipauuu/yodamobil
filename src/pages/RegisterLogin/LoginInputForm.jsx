@@ -9,7 +9,7 @@ const LoginInputForm = () => {
   };
 
   return (
-    <Container style={{ width: "70%" }}>
+    <Container className="con">
       <div className="wrapper">
         <p>Email</p>
         <InputGroup>

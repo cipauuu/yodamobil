@@ -6,7 +6,7 @@ import TopHeader from "./TopHeader";
 import styled from "styled-components";
 import LoginInputForm from "./LoginInputForm";
 import ForgotPasswordForm from "./ForgotPasswordForm";
-import LoginMobile from "./LoginMobile";
+import Mobile from "./Mobile";
 import { useLocation } from "react-router-dom";
 import "./Style.css";
 
@@ -16,7 +16,7 @@ const ContainerP = styled(Container)`
 
 const Login = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const isBigScreen = useMediaQuery({ maxDeviceWidth: 768 - 1 });
+  const isBigScreen = useMediaQuery({ maxDeviceWidth: 1024 - 1 });
 
   useEffect(() => {
     setIsMobile(isBigScreen);
@@ -29,7 +29,7 @@ const Login = () => {
   return (
     <>
       {isMobile ? (
-        <LoginMobile />
+        <Mobile />
       ) : (
         <ContainerP fluid>
           <Row>

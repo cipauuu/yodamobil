@@ -11,7 +11,7 @@ import Img from "../../components/Img/Img";
 
 const RegisInputForm2 = () => {
   return (
-    <Container style={{ width: "70%" }}>
+    <Container className="con">
       <div className="wrapper">
         <p>Email</p>
         <InputGroup>
