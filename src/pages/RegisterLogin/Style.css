@@ -6,7 +6,7 @@ a:hover {
   width: 70%;
 }
 
-@media screen and (max-width: 1023.75px) {
+@media screen and (max-width: 1365.75px) {
   .con {
     width: 100%;
   }
@@ -14,12 +14,13 @@ a:hover {
 
 .card {
   border: 0 !important;
+  height: 92vh;
 }
 
 .bg {
   background: #203756;
   position: static;
-  height: 100%;
+  height: 88%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -41,6 +42,7 @@ a:hover {
   opacity: 0.49;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  height: 100%;
 }
 
 .card-image-mobile {
@@ -95,7 +97,7 @@ a:hover {
   width: 410px;
 }
 
-@media screen and (max-width: 1023.75px) {
+@media screen and (max-width: 1365.75px) {
   .sj {
     width: auto;
     margin-bottom: 20vh;
@@ -117,7 +119,7 @@ a:hover {
   background: #78c2b4;
 }
 
-@media screen and (max-width: 1023.75px) {
+@media screen and (max-width: 1365.75px) {
   .sbm{
     margin-bottom: 20vw;
   }

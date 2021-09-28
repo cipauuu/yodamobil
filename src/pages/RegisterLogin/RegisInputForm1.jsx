@@ -1,15 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useMediaQuery } from "react-responsive";
+import React from "react";
 import { Container, InputGroup, FormControl, Button } from "react-bootstrap";
 import Img from "../../components/Img/Img";
 
 const RegisInputForm1 = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const isBigScreen = useMediaQuery({ maxDeviceWidth: 1024 - 1 });
-
-  useEffect(() => {
-    setIsMobile(isBigScreen);
-  }, [isBigScreen]);
 
   return (
     <>
