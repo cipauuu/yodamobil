@@ -15,6 +15,13 @@ const Anchor = styled.a`
   padding: 24px;
   margin: 8px 0;
   cursor: pointer;
+
+  img {
+    filter: ${(props) =>
+      props.active
+        ? "invert(90%) sepia(16%) saturate(699%) hue-rotate(99deg) brightness(100%) contrast(91%)"
+        : "none"};
+  }
 `;
 
 const Title = styled.p`
@@ -57,7 +64,7 @@ const LeftNavSidebar = () => {
       <Title>Pencarian mobil</Title>
       <Anchor href="/search" active>
         <Img src="/assets/ic_search.svg" />
-        <Typo>Search</Typo>
+        <Typo>Cari Mobil</Typo>
       </Anchor>
       <Anchor href="/search">
         <Img src="/assets/ic_listings.svg" />
