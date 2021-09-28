@@ -1,0 +1,70 @@
+nav {
+  padding: 2vw 14vw !important;
+}
+
+nav .nav-link {
+  font-weight: 600;
+  font-size: 16px;
+  color: #0d0a19 !important;
+  margin-right: 3vw;
+}
+
+nav .nav-daftar {
+  color: #9a9ea7 !important;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.home-head {
+  border-radius: 20px;
+  background: #203756;
+  padding-left: 0;
+  padding-right: 0;
+  height: 555px;
+}
+
+.home-head .image {
+  position: absolute;
+  mix-blend-mode: luminosity;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.home-head .con {
+  padding-top: 8vw;
+  padding-left: 5vw;
+  padding-bottom: 5vw;
+  position: relative;
+  z-index: 2;
+}
+
+.home-head .title {
+  width: 527px;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -0.266667px;
+  color: #ffffff;
+  margin-bottom: 33px;
+}
+
+.home-head .search{
+  border-radius: 8px;
+  background: white;
+}
+
+.home-head .search .item{
+  width: 20%;
+  padding-top: 8px;
+}
+
+.home-head .search .item.li{
+  border-right: 1px solid #EDE8E9;
+}
+
+.home-head .search .item .property{
+  color: #9A9EA7;
+  font-size: 12px;
+}

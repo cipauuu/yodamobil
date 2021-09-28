@@ -16,7 +16,7 @@ const ContainerP = styled(Container)`
 
 const Login = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const isBigScreen = useMediaQuery({ maxDeviceWidth: 1024 - 1 });
+  const isBigScreen = useMediaQuery({ maxDeviceWidth: 1366 - 1 });
 
   useEffect(() => {
     setIsMobile(isBigScreen);
