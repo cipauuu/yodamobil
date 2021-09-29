@@ -4,7 +4,7 @@ import Flex from "../../components/FlexBox/Flex";
 import Img from "../../components/Img/Img";
 
 const Icon = styled(Img)`
-  width: 70px;
+  height: 27px;
   :hover {
     cursor: pointer;
   }
@@ -51,8 +51,8 @@ const Pagination = ({ page, size, total, fetch }) => {
         {page > 1 && (
           <Icon
             onClick={handlePrev}
-            src="/assets/ic_next_page.svg"
-            alt="previous"
+            src="/assets/ic_previous_page.svg"
+            alt="previous button icon"
           />
         )}
         {shownPages.map((val) => (

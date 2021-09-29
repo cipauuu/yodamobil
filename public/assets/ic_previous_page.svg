@@ -1,0 +1,19 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 40" width="110" height="40">
+	<title>Next</title>
+	<defs>
+		<image  width="82" height="40" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAAAoCAMAAABaS10OAAAAAXNSR0IB2cksfwAAAJ9QTFRFAAAA39/f5efp5Ofo5Obo5Obo4uTn3+fn5Obo6+zt+Pn5/v7+////7u/w5ebo39/n8fPz5OTn6+zu4+Xn5Obo/f3+8vP0+fn6/Pz8mp6noKSs8/P0+vr7rbC4+Pj5zM7T+/v7p6qys7a95ufp+/v85efp09XZztDU/Pz99vf39PX29/j5ubzCm5+o6urs+fn5+/z8+Pn65Obp7u/x8vL0CZogoQAAADV0Uk5TABB/v//PYCDf///////fIP9g/4C////////////////////////////////////////P///IKMM5AAAA6UlEQVR4nO3XyQ6CQAwG4KKAOBRk18EVcd8V3//ZREz0QmMy1hv/oafhy0wy0AIAWqutM8Uw4ZmO1RU28kQ4bq8kLY/Jq+K5GvgOp4gYhGAIXlJEoPOKGOvsJDZkQ/6HTPrPOlD8ltSSMh2WdaQmEqQcl3WiJtoEKaeIMzWS2GU2l7kiSJJJmi2IJ5bvrkCsIEhcyfXm23a2u33dpaBIPBxP30giJHlOL9wk5qpdkyZxwvn2vFIvXuMfSNU0ZENykFzj6oeMuIfBG4QBL1mYoFl3TvHuVuN/wXV2WwTV+A/gG1w/KVGoATwAq8+XPO6PaBQAAAAASUVORK5CYII="/>
+		<image  width="86" height="40" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAAoCAMAAABToP10AAAAAXNSR0IB2cksfwAAAMNQTFRFAAAA5Obo5Obo4uTn////+Pn57u/w5ebo39/n8fPz39/f6+zu4+Xn5Obo/f3+////////////////////////////+vr7////////////////+fn6////////////////////////////////////////////////////////8/P04+Tn/f398fLz/v7+/////////Pz8////////////////////////////////////////////////5Obp7u/x8vL0jYGI3wAAAEF0Uk5TAP/PYP///98g/xD/gL//J7jzaPmDfv+ICkTT/wMlbcPx/iC+/Fx8/V77//////8U1P+UQ/QFLIXZ9vgcMCHP///47ILeAAAA1ElEQVR4nO3XxxKCQBAEUNBdUQFzzpgwYs7x/79K0ZMWxc4uTHmQPne9mppbSxIzMl9CYTZph/CFRpQoAktITIljsETVUFiqo7AJGYUlARuwv2WTqTQGm8kKqGw2J6Ky2bzdKvjOFjGuLZUrIKYKZ2v1RrNlwK77/pIL2+50YaZDXNge8FJOtv9umCK6CzsYflZH4wmZWp7Z2dyhv/DMSksYwcuu1ijsZrvbH0zj6DP7ok/nCwJrJ2D/gKVXFPYGmQ/c6l0BqJysRVXYJOEcULr2HCQPhq0ovCYUzwUAAAAASUVORK5CYII="/>
+		<image  width="8" height="12" id="img3" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMBAMAAACtsOGuAAAAAXNSR0IB2cksfwAAABVQTFRF////5ufpzM/Tmp6nzc7TzM7Tzc/TXjja8QAAACVJREFUeJxjYIAARhChLMDAwGQCYjhAGaxmIPHgBARTAKaYgQEARr4CkcI8LDQAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.txt0 { font-size: 14px;fill: #9a9ea7;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+	<use id="Layer 2" href="#img2" x="24" y="0" />
+	<use id="Layer 1" href="#img3" x="18" y="14" />
+	<text id="Previous" style="transform: matrix(1,0,0,1,34,25)" >
+		<tspan x="0" y="0" class="txt0">P</tspan><tspan  y="0" class="txt0">r</tspan><tspan  y="0" class="txt0">e</tspan><tspan  y="0" class="txt0">v</tspan><tspan  y="0" class="txt0">i</tspan><tspan  y="0" class="txt0">o</tspan><tspan  y="0" class="txt0">u</tspan><tspan  y="0" class="txt0">s</tspan><tspan  y="0" class="txt0">
+</tspan>
+	</text>
+</svg>

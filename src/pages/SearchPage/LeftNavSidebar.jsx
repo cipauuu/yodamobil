@@ -1,6 +1,6 @@
 import React from "react";
 import Img from "../../components/Img/Img";
-import logo from "../../img/logo.svg";
+import logo from "../../logo.svg";
 import { Container } from "./SearchPageStyle";
 import styled from "styled-components";
 

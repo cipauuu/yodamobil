@@ -4,6 +4,7 @@ import Flex from "../../components/FlexBox/Flex";
 import Pagination from "./Pagination";
 import SearchControl from "./SearchControl";
 import SearchResult from "./SearchResult";
+import Footer from "../../components/Footer/Footer";
 
 const Title = styled.h3`
   font-weight: 700;
@@ -22,14 +23,19 @@ const SearchContent = () => {
   };
 
   return (
-    <Flex direction="column" width="100%" padding="24px">
-      <TopNav>
-        <Title>Find vehicle</Title>
-      </TopNav>
-      <SearchControl />
-      <SearchResult />
-      <Pagination page={1} size={25} total={100} fetch={handlePagination} />
-    </Flex>
+    <>
+      <Flex direction="column" width="100%">
+        <div style={{ padding: "24px" }}>
+          <TopNav>
+            <Title>Find vehicle</Title>
+          </TopNav>
+          <SearchControl />
+          <SearchResult />
+          <Pagination page={1} size={25} total={100} fetch={handlePagination} />
+        </div>
+        <Footer />
+      </Flex>
+    </>
   );
 };
 
