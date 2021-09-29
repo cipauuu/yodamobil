@@ -6,9 +6,9 @@ const NavigationBar = () => {
   return (
     <Navbar bg="white" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">
+        <Link to="/" className="navbar-brand">
           <img src="assets/logo.svg" alt="" />
-        </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
