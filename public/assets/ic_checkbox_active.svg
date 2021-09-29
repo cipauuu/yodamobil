@@ -1,3 +1,12 @@
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="20" height="20" rx="4" fill="#203756"/>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="20" height="20">
+	<title>Rectangle 3-svg</title>
+	<defs>
+		<image width="11" height="8" id="img1" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDExIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0zLjY0MzcgNy44NDI4OEwwLjE1NzEwMSA0LjM1NjI4Qy0wLjA1MjM2NzEgNC4xNDY4MSAtMC4wNTIzNjcxIDMuODA3MTggMC4xNTcxMDEgMy41OTc2OUwwLjkxNTY2OCAyLjgzOTFDMS4xMjUxNCAyLjYyOTYxIDEuNDY0NzkgMi42Mjk2MSAxLjY3NDI2IDIuODM5MUw0LjAyMyA1LjE4NzgyTDkuMDUzNzQgMC4xNTcxMDFDOS4yNjMyMSAtMC4wNTIzNjcxIDkuNjAyODYgLTAuMDUyMzY3MSA5LjgxMjMzIDAuMTU3MTAxTDEwLjU3MDkgMC45MTU2ODlDMTAuNzgwNCAxLjEyNTE2IDEwLjc4MDQgMS40NjQ3OSAxMC41NzA5IDEuNjc0MjhMNC40MDIyOSA3Ljg0MjlDNC4xOTI4IDguMDUyMzcgMy44NTMxNyA4LjA1MjM3IDMuNjQzNyA3Ljg0Mjg4WiIgZmlsbD0iIzc4QzJCNCIvPgo8L3N2Zz4K"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #203756 } 
+	</style>
+	<path id="Layer" class="shp0" d="M0 4C0 1.79 1.79 0 4 0L16 0C18.21 0 20 1.79 20 4L20 16C20 18.21 18.21 20 16 20L4 20C1.79 20 0 18.21 0 16L0 4Z" />
+	<use id="Shape" href="#img1" transform="matrix(1,0,0,1,5,6)"/>
 </svg>
