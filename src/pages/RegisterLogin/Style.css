@@ -52,7 +52,7 @@ a:hover {
   height: 100vh;
 }
 
-.title {
+.body-card .title {
   position: absolute;
   top: 5vw;
   left: 7vh;
