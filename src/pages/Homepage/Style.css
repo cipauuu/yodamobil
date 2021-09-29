@@ -21,6 +21,7 @@ nav .nav-daftar {
   padding-left: 0;
   padding-right: 0;
   height: 555px;
+  margin-bottom: 90px;
 }
 
 .home-head .image {
@@ -41,7 +42,6 @@ nav .nav-daftar {
 }
 
 .home-head .title {
-  width: 527px;
   font-weight: bold;
   font-size: 56px;
   line-height: 64px;
@@ -50,21 +50,235 @@ nav .nav-daftar {
   margin-bottom: 33px;
 }
 
-.home-head .search{
+.home-head .search {
   border-radius: 8px;
   background: white;
 }
 
-.home-head .search .item{
+.home-head .search .item {
   width: 20%;
   padding-top: 8px;
 }
 
-.home-head .search .item.li{
-  border-right: 1px solid #EDE8E9;
+.home-head .search .item.li {
+  border-right: 1px solid #ede8e9;
 }
 
-.home-head .search .item .property{
-  color: #9A9EA7;
+.home-head .search .item .property {
+  color: #9a9ea7;
   font-size: 12px;
+  margin-bottom: 0;
+}
+
+.home-head .search .item select {
+  border: 0;
+  margin-bottom: 12px;
+  margin-left: -4px;
+}
+
+.home-head .search .item .option {
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  color: #0d0a19;
+}
+
+.home-head .search .item .search {
+  background: #78c2b4;
+  border-color: #78c2b4;
+  border-radius: 10px;
+  color: white;
+  width: 90%;
+}
+
+.home-head .search .item .fa {
+  font-size: 14px;
+  font-weight: 100;
+  margin-right: 0.5vw;
+}
+
+.bot-header .start-video {
+  cursor: pointer;
+}
+
+.bot-header .text1 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.bot-header .text2 {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  color: #ffffff;
+  margin-bottom: 0;
+}
+
+.car-logo {
+  margin-bottom: 85px !important;
+}
+
+.car-logo .jr {
+  margin-right: 60px;
+}
+
+.iklan-favorit {
+  margin-bottom: 112px;
+}
+
+.iklan-favorit .title,
+.temukan-mobil .title,
+.jelajahi-merek .title,
+.ulasan-terbaru .title {
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: -0.1px;
+  color: #0d0a19;
+}
+
+.iklan-favorit img {
+  border-radius: 6px 6px 0px 0px;
+  margin-bottom: 16px;
+  height: 188px;
+}
+
+.iklan-favorit .item-title,
+.temukan-mobil .item-title,
+.ulasan-terbaru .item-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #0d0a19;
+  margin-bottom: 0;
+}
+
+.iklan-favorit .item-sub-title,
+.ulasan-terbaru .item-sub-title {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+}
+
+.temukan-mobil {
+  margin-bottom: 121px;
+}
+
+.temukan-mobil .slider-num {
+  font-weight: bold;
+  font-size: 16px;
+  color: #9a9ea7;
+}
+
+.temukan-mobil .text-right img {
+  cursor: pointer;
+}
+
+.temukan-mobil .col-3 img {
+  height: 117px;
+  margin-bottom: 25px;
+}
+
+.temukan-mobil button {
+  background: #f5f6f7;
+  border-color: #f5f6f7;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+  margin-top: 13px;
+}
+
+.temukan-mobil button:hover {
+  background: #ebf6f4;
+  border-color: #ebf6f4;
+  color: #78c2b4;
+}
+
+.jelajahi-merek {
+  background-image: url("../../components/Img/bg_jelajahi_merk.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-bottom: 50px;
+  margin-bottom: 41px;
+}
+
+.jelajahi-merek .sub-title {
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+  margin-top: 1vw;
+}
+
+.jelajahi-merek .car-card {
+  background: #ffffff;
+  box-shadow: 0px 3px 4px rgba(153, 155, 168, 0.15);
+  border-radius: 6px;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+.jelajahi-merek .car-card .row {
+  height: 96px;
+}
+
+.jelajahi-merek .item-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #0d0a19;
+  margin-bottom: 0;
+}
+
+.jelajahi-merek .item-sub-title {
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+  margin-bottom: 0;
+}
+
+.ulasan-terbaru {
+  margin-bottom: 112px;
+}
+
+.ulasan-terbaru .col-4 img {
+  border-radius: 8px;
+  height: 228px;
+  margin-bottom: 16px;
+}
+
+.ulasan-terbaru .review {
+  margin-top: 22px;
+}
+
+.ulasan-terbaru .review .col-2 img {
+  height: 42px;
+  width: 42px;
+}
+
+.ulasan-terbaru .review .item-title {
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  color: #0d0a19;
+  margin-right: 5px;
+  margin-bottom: 0;
+}
+
+.ulasan-terbaru .review .item-sub-title {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+  margin-bottom: 0;
+}
+
+.ulasan-terbaru .review .col-4 .row .col-4 img {
+  height: 18px;
+  width: 18px;
+  margin-right: 4px;
+  margin-bottom: 0;
+  margin-top: -4px;
 }
