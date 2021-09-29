@@ -1,4 +1,29 @@
 import styled from "styled-components";
+import Flex from "../../components/FlexBox/Flex";
+
+export const FilterContainer = styled(Flex)`
+  color: ${(props) => (props.active ? "#0D0A19" : "#9A9EA7")};
+  font-size: 14px;
+  font-weight: ${(props) => (props.active ? "600" : "400")};
+
+  img {
+    cursor: pointer;
+  }
+`;
+
+export const FilterText = styled.p`
+  font-size: 14px;
+  margin: 0;
+`;
+
+export const ExpandButton = styled.button`
+  background: none;
+  border: none;
+  :focus {
+    border: none;
+    outline: none;
+  }
+`;
 
 export const SearchBtn = styled.button`
   display: flex;

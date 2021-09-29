@@ -21,7 +21,7 @@ const engineData = [
   },
 ];
 
-const EngineFilter = () => {
+const InteriorFilter = () => {
   const [expand, setExpand] = useState(false);
   const [selected, setSelected] = useState(engineData[0]);
 
@@ -32,7 +32,7 @@ const EngineFilter = () => {
   return (
     <Flex width="100%" direction="column" margin="16px 0 0">
       <Flex width="100%" justifyContent="space-between" alignItems="center">
-        <FilterText>Mesin</FilterText>
+        <FilterText>Interior</FilterText>
         <ExpandButton onClick={() => setExpand(!expand)}>
           <Img
             src={
@@ -68,4 +68,4 @@ const EngineFilter = () => {
   );
 };
 
-export default EngineFilter;
+export default InteriorFilter;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Flex from "../../components/FlexBox/Flex";
 import Img from "../../components/Img/Img";
-import { ExpandButton, FilterContainer, FilterText } from "./SearchPageStyle";
+import { FilterContainer, ExpandButton, FilterText } from "./SearchPageStyle";
 
 const engineData = [
   {
@@ -21,7 +21,7 @@ const engineData = [
   },
 ];
 
-const EngineFilter = () => {
+const BodyTypeFilter = () => {
   const [expand, setExpand] = useState(false);
   const [selected, setSelected] = useState(engineData[0]);
 
@@ -32,7 +32,7 @@ const EngineFilter = () => {
   return (
     <Flex width="100%" direction="column" margin="16px 0 0">
       <Flex width="100%" justifyContent="space-between" alignItems="center">
-        <FilterText>Mesin</FilterText>
+        <FilterText>Tipe Bodi</FilterText>
         <ExpandButton onClick={() => setExpand(!expand)}>
           <Img
             src={
@@ -68,4 +68,4 @@ const EngineFilter = () => {
   );
 };
 
-export default EngineFilter;
+export default BodyTypeFilter;

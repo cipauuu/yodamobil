@@ -3,11 +3,17 @@ import Flex from "../../components/FlexBox/Flex";
 import Img from "../../components/Img/Img";
 import { SearchContainer, ImgBox, Input, SearchBtn } from "./SearchPageStyle";
 import { buttonData } from "./SearchHelper";
-import SearchButton from "./SearchButton";
 import FilterModal from "./FilterModal";
 
 const SearchControl = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState();
+
+  const handleSearch = (v) => {
+    setSelected(v);
+    //nanti disini manggil api
+  };
+
   return (
     <>
       <FilterModal isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -21,7 +27,14 @@ const SearchControl = () => {
         <Flex width="100%" justifyContent="space-between" margin="16px 0">
           <Flex>
             {buttonData.map((v) => (
-              <SearchButton key={v.id} data={v} />
+              <SearchBtn
+                key={v.id}
+                margin="0 0 0 4px"
+                active={selected?.id === v.id}
+                onClick={() => handleSearch(v)}
+              >
+                <p>{v.text}</p>
+              </SearchBtn>
             ))}
           </Flex>
           <SearchBtn

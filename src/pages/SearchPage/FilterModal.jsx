@@ -3,6 +3,15 @@ import Img from "../../components/Img/Img";
 import EngineFilter from "./EngineFilter";
 import { Container } from "./SearchPageStyle";
 import styled from "styled-components";
+import YearFilter from "./YearFilter";
+import ModelFilter from "./ModelFilter";
+import BrandFilter from "./BrandFilter";
+import TransmissionFilter from "./TransmissionFilter";
+import BodyTypeFilter from "./BodyTypeFilter";
+import DriveTrainFilter from "./DriveTrainFilter";
+import InteriorFilter from "./InteriorFilter";
+import ColorFilter from "./ColorFilter";
+import FeatureFilter from "./FeatureFilter";
 
 const FilterContainer = styled(Container)`
   background: #ffffff;
@@ -72,7 +81,17 @@ const FilterModal = ({ isOpen, setIsOpen }) => {
         <Img src="/assets/ic_filter.svg" margin="0 12px 0 0" />
         <p>Filter by</p>
       </CloseBtn>
+      <YearFilter />
+      <ModelFilter />
+      <BrandFilter />
+      <TransmissionFilter />
+      <BodyTypeFilter />
       <EngineFilter />
+      <DriveTrainFilter />
+      <InteriorFilter />
+      <ColorFilter />
+      <FeatureFilter />
+
       <ApplyFilter>Aplikasikan Filter</ApplyFilter>
     </FilterContainer>
   );
