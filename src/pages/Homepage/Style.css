@@ -50,33 +50,50 @@ nav .nav-daftar {
   margin-bottom: 33px;
 }
 
-.home-head .search {
+.home-head .search,
+.mobil-cari .search {
   border-radius: 8px;
   background: white;
 }
 
-.home-head .search .item {
+.mobil-cari {
+  margin-bottom: 99px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.mobil-cari .search {
+  box-shadow: 0px 3px 4px rgba(153, 155, 168, 0.15);
+  border-radius: 8px;
+}
+
+.home-head .search .item,
+.mobil-cari .search .item {
   width: 20%;
   padding-top: 8px;
 }
 
-.home-head .search .item.li {
+.home-head .search .item.li,
+.mobil-cari .search .item.li {
   border-right: 1px solid #ede8e9;
 }
 
-.home-head .search .item .property {
+.home-head .search .item .property,
+.mobil-cari .search .item .property {
   color: #9a9ea7;
   font-size: 12px;
   margin-bottom: 0;
 }
 
-.home-head .search .item select {
+.home-head .search .item select,
+.mobil-cari .search .item select {
   border: 0;
   margin-bottom: 12px;
   margin-left: -4px;
 }
 
-.home-head .search .item .option {
+.home-head .search .item .option,
+.mobil-cari .search .item .option {
   width: 100%;
   font-weight: 600;
   font-size: 14px;
@@ -84,7 +101,8 @@ nav .nav-daftar {
   color: #0d0a19;
 }
 
-.home-head .search .item .search {
+.home-head .search .item .search,
+.mobil-cari .search .item .search {
   background: #78c2b4;
   border-color: #78c2b4;
   border-radius: 10px;
@@ -92,7 +110,8 @@ nav .nav-daftar {
   width: 90%;
 }
 
-.home-head .search .item .fa {
+.home-head .search .item .fa,
+.mobil-cari .search .item .fa {
   font-size: 14px;
   font-weight: 100;
   margin-right: 0.5vw;
@@ -132,7 +151,17 @@ nav .nav-daftar {
 .iklan-favorit .title,
 .temukan-mobil .title,
 .jelajahi-merek .title,
-.ulasan-terbaru .title {
+.jelajahi-merek2 .title,
+.ulasan-terbaru .title,
+.mobil-cari .title,
+.populer .title {
+  font-weight: bold;
+  font-size: 28px;
+  letter-spacing: -0.1px;
+  color: #0d0a19;
+}
+
+.ulasan-terbaru2 .title {
   font-weight: bold;
   font-size: 28px;
   letter-spacing: -0.1px;
@@ -147,7 +176,9 @@ nav .nav-daftar {
 
 .iklan-favorit .item-title,
 .temukan-mobil .item-title,
-.ulasan-terbaru .item-title {
+.ulasan-terbaru .item-title,
+.ulasan-terbaru2 .item-title,
+.populer .item-title {
   font-weight: bold;
   font-size: 16px;
   color: #0d0a19;
@@ -155,7 +186,9 @@ nav .nav-daftar {
 }
 
 .iklan-favorit .item-sub-title,
-.ulasan-terbaru .item-sub-title {
+.ulasan-terbaru .item-sub-title,
+.ulasan-terbaru2 .item-sub-title,
+.populer .item-sub-title {
   font-weight: normal;
   font-size: 14px;
   letter-spacing: -0.1px;
@@ -164,6 +197,10 @@ nav .nav-daftar {
 
 .temukan-mobil {
   margin-bottom: 121px;
+}
+
+.populer {
+  margin-bottom: 86px;
 }
 
 .temukan-mobil .slider-num {
@@ -179,6 +216,11 @@ nav .nav-daftar {
 .temukan-mobil .col-3 img {
   height: 117px;
   margin-bottom: 25px;
+}
+
+.populer .col-4 img {
+  height: 200px;
+  margin-bottom: 14px;
 }
 
 .temukan-mobil button {
@@ -198,6 +240,29 @@ nav .nav-daftar {
   color: #78c2b4;
 }
 
+.populer button.btn1 {
+  background: #ebf6f4;
+  border-color: #ebf6f4;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -0.1px;
+  color: #78c2b4;
+  margin-top: 13px;
+}
+
+.populer button.btn2 {
+  background: #f5f6f7;
+  border-color: #f5f6f7;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+  margin-top: 13px;
+  color: #9a9ea7;
+}
+
 .jelajahi-merek {
   background-image: url("../../components/Img/bg_jelajahi_merk.svg");
   background-repeat: no-repeat;
@@ -206,14 +271,20 @@ nav .nav-daftar {
   margin-bottom: 41px;
 }
 
-.jelajahi-merek .sub-title {
+.jelajahi-merek2 {
+  margin-bottom: 92px;
+}
+
+.jelajahi-merek .sub-title,
+.jelajahi-merek2 .sub-title {
   font-size: 14px;
   letter-spacing: -0.1px;
   color: #9a9ea7;
   margin-top: 1vw;
 }
 
-.jelajahi-merek .car-card {
+.jelajahi-merek .car-card,
+.jelajahi-merek2 .car-card {
   background: #ffffff;
   box-shadow: 0px 3px 4px rgba(153, 155, 168, 0.15);
   border-radius: 6px;
@@ -221,44 +292,52 @@ nav .nav-daftar {
   cursor: pointer;
 }
 
-.jelajahi-merek .car-card .row {
+.jelajahi-merek .car-card .row,
+.jelajahi-merek2 .car-card .row {
   height: 96px;
 }
 
-.jelajahi-merek .item-title {
+.jelajahi-merek .item-title,
+.jelajahi-merek2 .item-title {
   font-weight: bold;
   font-size: 18px;
   color: #0d0a19;
   margin-bottom: 0;
 }
 
-.jelajahi-merek .item-sub-title {
+.jelajahi-merek .item-sub-title,
+.jelajahi-merek2 .item-sub-title {
   font-size: 14px;
   letter-spacing: -0.1px;
   color: #9a9ea7;
   margin-bottom: 0;
 }
 
-.ulasan-terbaru {
-  margin-bottom: 112px;
+.ulasan-terbaru,
+.ulasan-terbaru2 {
+  margin-bottom: 99px;
 }
 
-.ulasan-terbaru .col-4 img {
+.ulasan-terbaru .col-4 img,
+.ulasan-terbaru2 .col-4 img {
   border-radius: 8px;
   height: 228px;
   margin-bottom: 16px;
 }
 
-.ulasan-terbaru .review {
+.ulasan-terbaru .review,
+.ulasan-terbaru2 .review {
   margin-top: 22px;
 }
 
-.ulasan-terbaru .review .col-2 img {
+.ulasan-terbaru .review .col-2 img,
+.ulasan-terbaru2 .review .col-2 img {
   height: 42px;
   width: 42px;
 }
 
-.ulasan-terbaru .review .item-title {
+.ulasan-terbaru .review .item-title,
+.ulasan-terbaru2 .review .item-title {
   font-weight: bold;
   font-size: 14px;
   letter-spacing: -0.1px;
@@ -267,7 +346,8 @@ nav .nav-daftar {
   margin-bottom: 0;
 }
 
-.ulasan-terbaru .review .item-sub-title {
+.ulasan-terbaru .review .item-sub-title,
+.ulasan-terbaru2 .review .item-sub-title {
   font-weight: normal;
   font-size: 14px;
   letter-spacing: -0.1px;
@@ -275,10 +355,84 @@ nav .nav-daftar {
   margin-bottom: 0;
 }
 
-.ulasan-terbaru .review .col-4 .row .col-4 img {
+.ulasan-terbaru .review .col-4 .row .col-4 img,
+.ulasan-terbaru2 .review .col-4 .row .col-4 img {
   height: 18px;
   width: 18px;
   margin-right: 4px;
   margin-bottom: 0;
   margin-top: -4px;
+}
+
+.header-dealer {
+  margin-top: 80px;
+  margin-bottom: 135px;
+}
+
+.header-dealer .sub-title {
+  font-weight: normal;
+  font-size: 16px;
+  color: #9a9ea7;
+  margin-bottom: 10px;
+}
+
+.header-dealer .title {
+  font-weight: bold;
+  font-size: 64px;
+  letter-spacing: -0.177778px;
+  color: #0d0a19;
+  margin-bottom: 49px;
+}
+
+.header-dealer .col-1 img {
+  cursor: pointer;
+}
+
+.header-dealer button.detail {
+  background: #f5f6f7;
+  border-color: #f5f6f7;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+  margin-right: 6px;
+  height: 48px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.header-dealer button.test-drive {
+  background: #78c2b4;
+  border-color: #78c2b4;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  color: #ffffff;
+  margin-left: 6px;
+  height: 48px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.header-dealer .img-sec .title {
+  font-weight: bold;
+  font-size: 48px;
+  letter-spacing: -0.133333px;
+  color: #0d0a19;
+  position: absolute;
+  top: -4vw;
+  left: 17vw;
+}
+
+.header-dealer .img-sec .sub-title {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: -0.1px;
+  color: #0d0a19;
+  position: absolute;
+  top: 1vw;
+  left: 18.5vw;
 }

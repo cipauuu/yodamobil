@@ -29,6 +29,15 @@ const Homepage = () => {
               </Form.Select>
             </Col>
             <Col className="item li">
+              <p className="property">Tahun</p>
+              <Form.Select
+                aria-label="Default select example"
+                className="option"
+              >
+                <option value="1">2015</option>
+              </Form.Select>
+            </Col>
+            <Col className="item li">
               <p className="property">Model</p>
               <Form.Select
                 aria-label="Default select example"
