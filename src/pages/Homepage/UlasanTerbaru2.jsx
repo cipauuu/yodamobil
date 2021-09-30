@@ -3,9 +3,9 @@ import { Col, Row } from "react-bootstrap";
 
 const UlasanTerbaru = () => {
   return (
-    <Col className="ulasan-terbaru">
-      <Row style={{ marginBottom: "40px" }}>
-        <Col>
+    <Col className="ulasan-terbaru2">
+      <Row style={{ marginBottom: "54px" }}>
+        <Col className="text-center">
           <p className="title">Ulasan terbaru</p>
         </Col>
       </Row>
