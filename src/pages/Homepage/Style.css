@@ -1,5 +1,15 @@
-nav {
-  padding: 2vw 14vw !important;
+nav .container-fluid {
+  padding: 2vw 14vw;
+}
+
+@media screen and (max-width: 991.75px) {
+  nav .container-fluid {
+    display: block !important;
+  }
+
+  nav .navbar-brand {
+    margin-left: 4vw;
+  }
 }
 
 nav .nav-link {
@@ -9,10 +19,31 @@ nav .nav-link {
   margin-right: 3vw;
 }
 
-nav .nav-daftar {
+nav .nav-daftar1,
+nav .nav-daftar2 {
   color: #9a9ea7 !important;
   font-weight: 600;
   font-size: 14px;
+}
+
+nav .nav-daftar2 {
+  position: absolute;
+  right: 2vw;
+  display: none;
+}
+
+@media screen and (max-width: 991.75px) {
+  nav .nav-daftar1 {
+    display: none;
+  }
+
+  nav .nav-daftar2 {
+    display: inline;
+  }
+}
+
+.navbar-light .navbar-toggler {
+  border: 0;
 }
 
 .home-head {
@@ -76,6 +107,34 @@ nav .nav-daftar {
 .home-head .search .item.li,
 .mobil-cari .search .item.li {
   border-right: 1px solid #ede8e9;
+}
+
+@media screen and (max-width: 991.75px) {
+  .home-head .title {
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  .home-head .con {
+    padding-top: 8vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vw;
+    position: relative;
+    z-index: 2;
+  }
+
+  .home-head .bot-header {
+    display: none;
+  }
+
+  .home-head .search .item.li {
+    border-right: 0;
+  }
+  .home-head .search .item .search {
+    margin-bottom: 18px;
+  }
 }
 
 .home-head .search .item .property,
@@ -148,11 +207,16 @@ nav .nav-daftar {
   margin-bottom: 112px;
 }
 
+.iklan-favorit .title {
+  margin-bottom: 40px;
+}
+
 .iklan-favorit .title,
 .temukan-mobil .title,
 .jelajahi-merek .title,
 .jelajahi-merek2 .title,
 .ulasan-terbaru .title,
+.ulasan-terbaru2 .title,
 .mobil-cari .title,
 .populer .title {
   font-weight: bold;
@@ -161,11 +225,33 @@ nav .nav-daftar {
   color: #0d0a19;
 }
 
-.ulasan-terbaru2 .title {
-  font-weight: bold;
-  font-size: 28px;
-  letter-spacing: -0.1px;
-  color: #0d0a19;
+@media screen and (max-width: 991.75px) {
+  .iklan-favorit .title,
+  .temukan-mobil .title,
+  .jelajahi-merek .title,
+  .jelajahi-merek2 .title,
+  .ulasan-terbaru .title,
+  .ulasan-terbaru2 .title,
+  .mobil-cari .title,
+  .populer .title {
+    font-size: 22px;
+  }
+
+  .iklan-favorit {
+    margin-bottom: 82px;
+  }
+
+  .iklan-favorit .title {
+    margin-bottom: 26px;
+  }
+
+  .temukan-mobil .slider-num {
+    display: none !important;
+  }
+
+  .temukan-mobil {
+    margin-bottom: 91px;
+  }
 }
 
 .iklan-favorit img {
@@ -213,7 +299,8 @@ nav .nav-daftar {
   cursor: pointer;
 }
 
-.temukan-mobil .col-3 img {
+.temukan-mobil .col-3 img,
+.temukan-mobil .col.px-0 img {
   height: 117px;
   margin-bottom: 25px;
 }
@@ -325,6 +412,13 @@ nav .nav-daftar {
   margin-bottom: 16px;
 }
 
+.ulasan-terbaru .mySwiper img {
+  border-radius: 8px;
+  height: 228px;
+  width: 339px;
+  margin-bottom: 16px;
+}
+
 .ulasan-terbaru .review,
 .ulasan-terbaru2 .review {
   margin-top: 22px;
@@ -356,7 +450,8 @@ nav .nav-daftar {
 }
 
 .ulasan-terbaru .review .col-4 .row .col-4 img,
-.ulasan-terbaru2 .review .col-4 .row .col-4 img {
+.ulasan-terbaru2 .review .col-4 .row .col-4 img,
+.ulasan-terbaru .review .col-4 img {
   height: 18px;
   width: 18px;
   margin-right: 4px;
@@ -435,4 +530,71 @@ nav .nav-daftar {
   position: absolute;
   top: 1vw;
   left: 18.5vw;
+}
+
+.mySwiper {
+  display: none;
+}
+
+@media screen and (max-width: 991.75px) {
+  .mySwiper {
+    display: block;
+  }
+
+  .car-logo,
+  .iklan-favorit .desktop,
+  .temukan-mobil .desktop,
+  .ulasan-terbaru .desktop {
+    display: none;
+  }
+
+  .ulasan-terbaru .mySwiper .px-0 .top {
+    height: 85vw;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.iklan-favorit .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.iklan-favorit .swiper-slide,
+.ulasan-terbaru .swiper-slide {
+  text-align: left;
+}
+
+.car-logo .swiper-slide img {
+  display: block;
+  width: auto;
+}
+
+.swiper-pagination {
+  display: none;
 }

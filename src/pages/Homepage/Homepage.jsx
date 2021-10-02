@@ -10,14 +10,24 @@ import UlasanTerbaru from "./UlasanTerbaru";
 import Footer from "../../components/Footer/Footer";
 import "./Style.css";
 
+// Import Swiper styles
+import "swiper/swiper-bundle.css";
+
+// import Swiper core and required modules
+import SwiperCore, { Pagination } from "swiper";
+
+// install Swiper modules
+SwiperCore.use([Pagination]);
+
 const Homepage = () => {
+
   return (
     <>
       <NavigationBar />
       <Container>
         <Row>
           <Header />
-        </Row>
+          </Row>
         <Row>
           <CarLogo />
         </Row>

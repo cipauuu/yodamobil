@@ -43,3 +43,29 @@
   color: #9a9ea7;
   display: inline;
 }
+
+@media screen and (max-width: 991.75px) {
+  .footer-sec {
+    display: none;
+  }
+
+  .footer-sec-bottom {
+    background: #f5f6f7;
+    margin-bottom: 0;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-sec-bottom a{
+    display: block;
+    margin-bottom: 25px;
+    margin-right: 0;
+  }
+
+  .footer-sec-bottom a,.footer-sec-bottom p{
+    text-align: center;
+    display: block;
+  }
+}
