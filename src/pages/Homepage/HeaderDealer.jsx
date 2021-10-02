@@ -27,7 +27,7 @@ const HeaderDealer = () => {
           <Col className="text-center img-sec">
             <p className="title">Rp 299 jt</p>
             <p className="sub-title">Starting from</p>
-            <img src="/assets/header-dealer/1.png" />
+            <img src="/assets/header-dealer/1.png" alt=""/>
           </Col>
         </Row>
       </Container>

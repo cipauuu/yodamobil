@@ -62,11 +62,11 @@ const Footer = () => {
         </Row>
       </Col>
       <Col className="footer-sec-bottom">
-      <Link to="/ketentuan-pribadi" className="sub-title">
-        Ketentuan Pribadi
+        <Link to="/ketentuan-pribadi" className="sub-title">
+          Ketentuan Pribadi
         </Link>
         <Link to="/syarat-dan-ketentuan" className="sub-title">
-        Syarat dan Ketentuan
+          Syarat dan Ketentuan
         </Link>
         <p>© 2021 Kalachakra Consulting</p>
       </Col>

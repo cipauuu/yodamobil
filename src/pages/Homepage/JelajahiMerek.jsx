@@ -6,17 +6,17 @@ const JelajahiMerek = () => {
     <Col className="jelajahi-merek">
       <Container>
         <Row style={{ marginBottom: "42px" }}>
-          <Col xs={4}>
+          <Col xs={12} xl={4}>
             <p className="title">Jelajahi merek mobil terbaik</p>
           </Col>
-          <Col xs={8}>
+          <Col xs={12} xl={8}>
             <p className="sub-title">
               Mobil terbaik yang mendapatkan posisi teratas di pasaran otomotif.
             </p>
           </Col>
         </Row>
         <Row>
-        <Col xs={4}>
+        <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
@@ -29,7 +29,7 @@ const JelajahiMerek = () => {
               </Row>
             </div>
           </Col>
-          <Col xs={4}>
+          <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
@@ -42,7 +42,7 @@ const JelajahiMerek = () => {
               </Row>
             </div>
           </Col>
-          <Col xs={4}>
+          <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
@@ -55,7 +55,7 @@ const JelajahiMerek = () => {
               </Row>
             </div>
           </Col>
-          <Col xs={4}>
+          <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
@@ -68,7 +68,7 @@ const JelajahiMerek = () => {
               </Row>
             </div>
           </Col>
-          <Col xs={4}>
+          <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
@@ -81,7 +81,7 @@ const JelajahiMerek = () => {
               </Row>
             </div>
           </Col>
-          <Col xs={4}>
+          <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
