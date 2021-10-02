@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const UlasanTerbaru = () => {
   return (
     <Col className="ulasan-terbaru">
-      <Row style={{ marginBottom: "40px" }}>
+      <Row>
         <Col>
           <p className="title">Ulasan terbaru</p>
         </Col>
@@ -88,7 +88,7 @@ const UlasanTerbaru = () => {
       </Row>
 
       <Swiper
-        slidesPerView={1.2}
+        slidesPerView={1.5}
         spaceBetween={30}
         freeMode={true}
         pagination={{
@@ -113,11 +113,11 @@ const UlasanTerbaru = () => {
                   <Col xs={2}>
                     <img src="/assets/ulasan-terbaru/review/1.png" alt="" />
                   </Col>
-                  <Col xs={6}>
+                  <Col xs={5}>
                     <p className="item-title">Erviana Puspitasari</p>
                     <p className="item-sub-title">Pekerja Lepas</p>
                   </Col>
-                  <Col xs={4}>
+                  <Col xs={5} className="text-right">
                     <img src="/assets/ic_review_star.svg" alt="" />
                     <p className="item-title d-inline">4.91</p>
                     <p className="item-sub-title d-inline">(98)</p>
@@ -143,11 +143,11 @@ const UlasanTerbaru = () => {
                   <Col xs={2}>
                     <img src="/assets/ulasan-terbaru/review/2.png" alt="" />
                   </Col>
-                  <Col xs={6}>
+                  <Col xs={5}>
                     <p className="item-title">Retno Niawati</p>
                     <p className="item-sub-title">Pegawai Negri</p>
                   </Col>
-                  <Col xs={4}>
+                  <Col xs={5} className="text-right">
                     <img src="/assets/ic_review_star.svg" alt="" />
                     <p className="item-title d-inline">4.65</p>
                     <p className="item-sub-title d-inline">(93)</p>
@@ -173,11 +173,11 @@ const UlasanTerbaru = () => {
                 <Col xs={2}>
                   <img src="/assets/ulasan-terbaru/review/3.png" alt="" />
                 </Col>
-                <Col xs={6}>
+                <Col xs={5}>
                   <p className="item-title">Khusnu Wijaya</p>
                   <p className="item-sub-title">Entrepreneur</p>
                 </Col>
-                <Col xs={4}>
+                <Col xs={5} className="text-right">
                   <img src="/assets/ic_review_star.svg" alt="" />
                   <p className="item-title d-inline">4.55</p>
                   <p className="item-sub-title d-inline">(35)</p>

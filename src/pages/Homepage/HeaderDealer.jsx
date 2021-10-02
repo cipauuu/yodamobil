@@ -11,7 +11,7 @@ const HeaderDealer = () => {
             <p className="title">Honda Civic Type R</p>
           </Col>
         </Row>
-        <Row style={{ marginBottom: "147px" }}>
+        <Row className="sec2">
           <Col xs={1}>
             <img src="/assets/ic_slider_arrow_left.svg" alt="" />
           </Col>

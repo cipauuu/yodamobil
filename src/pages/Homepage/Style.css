@@ -39,6 +39,7 @@ nav .nav-daftar2 {
 
   nav .nav-daftar2 {
     display: inline;
+    padding-top: 2vw;
   }
 }
 
@@ -129,11 +130,22 @@ nav .nav-daftar2 {
     display: none;
   }
 
-  .home-head .search .item.li {
+  .home-head .search .item.li,
+  .mobil-cari .search .item.li {
     border-right: 0;
   }
-  .home-head .search .item .search {
+  .home-head .search .item .search,.mobil-cari .search .item .search {
     margin-bottom: 18px;
+  }
+
+  .mobil-cari {
+    margin-bottom: 53px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .mobil-cari .title{
+    text-align: left;
   }
 }
 
@@ -225,6 +237,26 @@ nav .nav-daftar2 {
   color: #0d0a19;
 }
 
+.ulasan-terbaru .title{
+  margin-bottom: 40px;
+}
+
+.populer {
+  margin-bottom: 86px;
+}
+
+.populer .title{
+  margin-bottom: 54px;
+}
+
+.jelajahi-merek2 .title{
+  margin-bottom: 49px;
+}
+
+.jelajahi-merek2 {
+  margin-bottom: 92px;
+}
+
 @media screen and (max-width: 991.75px) {
   .iklan-favorit .title,
   .temukan-mobil .title,
@@ -251,6 +283,31 @@ nav .nav-daftar2 {
 
   .temukan-mobil {
     margin-bottom: 91px;
+  }
+
+  .ulasan-terbaru .title{
+    margin-bottom: 23px;
+  }
+
+  .populer .title{
+    text-align: left;
+  }
+
+  .populer .title{
+    margin-bottom: 24px;
+  }
+
+  .populer {
+    margin-bottom: 40px;
+  }
+
+  .jelajahi-merek2 .title{
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .jelajahi-merek2 {
+    margin-bottom: 49px;
   }
 }
 
@@ -283,10 +340,6 @@ nav .nav-daftar2 {
 
 .temukan-mobil {
   margin-bottom: 121px;
-}
-
-.populer {
-  margin-bottom: 86px;
 }
 
 .temukan-mobil .slider-num {
@@ -358,10 +411,6 @@ nav .nav-daftar2 {
   margin-bottom: 41px;
 }
 
-.jelajahi-merek2 {
-  margin-bottom: 92px;
-}
-
 .jelajahi-merek .sub-title,
 .jelajahi-merek2 .sub-title {
   font-size: 14px;
@@ -414,8 +463,8 @@ nav .nav-daftar2 {
 
 .ulasan-terbaru .mySwiper img {
   border-radius: 8px;
-  height: 228px;
-  width: 339px;
+  height: 160px;
+  width: 250px;
   margin-bottom: 16px;
 }
 
@@ -451,7 +500,7 @@ nav .nav-daftar2 {
 
 .ulasan-terbaru .review .col-4 .row .col-4 img,
 .ulasan-terbaru2 .review .col-4 .row .col-4 img,
-.ulasan-terbaru .review .col-4 img {
+.ulasan-terbaru .review .col-5 img {
   height: 18px;
   width: 18px;
   margin-right: 4px;
@@ -532,6 +581,61 @@ nav .nav-daftar2 {
   left: 18.5vw;
 }
 
+.header-dealer .sec2 {
+  margin-bottom: 147px;
+}
+
+@media screen and (max-width: 991.75px) {
+  .header-dealer .sub-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .header-dealer .title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 59px;
+  }
+
+  .header-dealer .img-sec img {
+    width: 371px;
+    height: 147px;
+  }
+
+  .header-dealer .img-sec .title {
+    font-size: 30px;
+    line-height: 48px;
+    top: -8vw;
+    left: 5vw;
+  }
+
+  .header-dealer .img-sec .sub-title {
+    font-size: 12px;
+    line-height: 18px;
+    top: 2vw;
+    left: 5vw;
+  }
+
+  .header-dealer .col-1 {
+    display: none;
+  }
+
+  .header-dealer .col-10 {
+    max-width: 100%;
+    flex: 100%;
+  }
+
+  .header-dealer button.detail,
+  .header-dealer button.test-drive {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .header-dealer .sec2 {
+    margin-bottom: 104px;
+  }
+}
+
 .mySwiper {
   display: none;
 }
@@ -541,15 +645,26 @@ nav .nav-daftar2 {
     display: block;
   }
 
-  .car-logo,
-  .iklan-favorit .desktop,
-  .temukan-mobil .desktop,
-  .ulasan-terbaru .desktop {
+  .car-logo, .desktop {
     display: none;
   }
 
   .ulasan-terbaru .mySwiper .px-0 .top {
     height: 85vw;
+  }
+
+  .populer .mySwiper .item-title,.populer .mySwiper .item-sub-title,.populer .mySwiper .col{
+    text-align: left;
+  }
+
+  .populer .mySwiper img{
+    width: 250px;
+    height: 160px;
+  }
+
+  .ulasan-terbaru img{
+    width: 250px;
+    height: 160px;
   }
 }
 
