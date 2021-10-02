@@ -5,13 +5,13 @@ const JelajahiMerek2 = () => {
   return (
     <Col className="jelajahi-merek2">
       <Container>
-        <Row style={{ marginBottom: "49px" }}>
+        <Row>
           <Col className="text-center">
             <p className="title">Jelajahi merek mobil terbaik</p>
           </Col>
         </Row>
         <Row>
-        <Col xs={4}>
+        <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
@@ -24,7 +24,7 @@ const JelajahiMerek2 = () => {
               </Row>
             </div>
           </Col>
-          <Col xs={4}>
+          <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
@@ -37,7 +37,7 @@ const JelajahiMerek2 = () => {
               </Row>
             </div>
           </Col>
-          <Col xs={4}>
+          <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
@@ -50,7 +50,7 @@ const JelajahiMerek2 = () => {
               </Row>
             </div>
           </Col>
-          <Col xs={4}>
+          <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
@@ -63,7 +63,7 @@ const JelajahiMerek2 = () => {
               </Row>
             </div>
           </Col>
-          <Col xs={4}>
+          <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
@@ -76,7 +76,7 @@ const JelajahiMerek2 = () => {
               </Row>
             </div>
           </Col>
-          <Col xs={4}>
+          <Col xs={12} xl={4}>
             <div className="car-card">
               <Row>
                 <Col xs={3} className="my-auto text-right">
