@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import NavigationBar from "./NavigationBar";
 import Header from "./Header";
@@ -27,7 +27,7 @@ const Homepage = () => {
       <Container>
         <Row>
           <Header />
-          </Row>
+        </Row>
         <Row>
           <CarLogo />
         </Row>

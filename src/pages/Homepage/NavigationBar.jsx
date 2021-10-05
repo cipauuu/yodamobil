@@ -1,8 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const NavigationBar = () => {
+  const token = Cookies.get("token");
+
+  useEffect(() => {
+    if((token === "") || (token === undefined) || (token === null)){
+      document.getElementById("daftar").style.display = "none";
+    }
+  });
+
   return (
     <Navbar bg="white" expand="lg">
       <Container fluid>
@@ -39,7 +48,7 @@ const NavigationBar = () => {
                 Mitra Dealer
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item" id="daftar">
               <Link to="/register" className="nav-daftar1 my-auto">
                 <img src="assets/ic_nav_daftar.svg" alt="" className="mr-2" />
                 Daftar

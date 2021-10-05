@@ -2,18 +2,66 @@ import React from "react";
 import { Container, InputGroup, FormControl, Button } from "react-bootstrap";
 import Img from "../../components/Img/Img";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import Cookies from 'js-cookie'
+import { useHistory } from "react-router-dom";
 
 const LoginInputForm = () => {
-  const clearPassword = () => {
-    document.getElementById("inputPass").value = "";
-  };
+  let history = useHistory();
+
+  const [inputEmail, setInputEmail] = React.useState("");
+  const [inputPassword, setInputPassword] = React.useState("");
+
+  function handleInputEmailChange(event) {
+    setInputEmail(event.target.value);
+  }
+  function handleInputPasswordChange(event) {
+    setInputPassword(event.target.value);
+  }
+
+  function clearPassword() {
+    setInputPassword("");
+  }
+
+  function tombolLogin() {
+    if (inputEmail === "") {
+      alert("Kolom email tidak boleh kosong");
+    } else if (inputPassword === "") {
+      alert("Kolom password tidak boleh kosong");
+    } else {
+      const data = {
+        email: inputEmail,
+        password: inputPassword,
+      };
+      const headers = {
+        Accept: "application/json",
+      };
+      axios
+        .post("https://yodacentral.herokuapp.com/api/login", data, {
+          headers,
+        })
+        .then((response) => {
+          Cookies.set('token', response.data.token);
+          history.push("/");
+        })
+        .catch((error) => {
+          //error.response.data.message
+          alert("Kombinasi email dan password salah")
+        });
+    }
+  }
 
   return (
     <Container className="con">
       <div className="wrapper">
         <p>Email</p>
         <InputGroup>
-          <FormControl placeholder="nama@domain.com" type="email" />
+          <FormControl
+            onChange={handleInputEmailChange}
+            value={inputEmail}
+            placeholder="nama@domain.com"
+            type="email"
+          />
           <InputGroup.Text>
             <Img src="/assets/ic_email.svg" />
           </InputGroup.Text>
@@ -22,7 +70,13 @@ const LoginInputForm = () => {
       <div className="wrapper">
         <p>Password</p>
         <InputGroup>
-          <FormControl placeholder="******" type="password" id="inputPass" />
+          <FormControl
+            onChange={handleInputPasswordChange}
+            value={inputPassword}
+            placeholder="******"
+            type="password"
+            id="inputPass"
+          />
           <InputGroup.Text>
             <Img
               src="/assets/ic_clear.svg"
@@ -42,7 +96,9 @@ const LoginInputForm = () => {
           </p>
         </Link>
       </div>
-      <Button className="sign-btn">Masuk</Button>
+      <Button onClick={tombolLogin} className="sign-btn">
+        Masuk
+      </Button>
 
       <div className="flex">
         <div className="line" /> <p className="typo">Atau</p>{" "}
