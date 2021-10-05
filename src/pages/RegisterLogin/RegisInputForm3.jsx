@@ -2,6 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 const RegisInputForm3 = () => {
+  let params = new URLSearchParams(document.location.search.substring(1));
+  let inputEmail = params.get("email");
+
   return (
     <Container className="con text-center">
       <Row>
@@ -13,8 +16,8 @@ const RegisInputForm3 = () => {
           />
           <p className="judul">Terima kasih!</p>
           <p className="sub-judul sj">
-            Kami telah mengirimkan email ke mahendrawisnu@me.com Silahkan klik
-            link pada email untuk memverifikasi akun Anda
+            Kami telah mengirimkan email ke {inputEmail} <br />
+            Silahkan klik link pada email untuk memverifikasi akun Anda
           </p>
         </Col>
       </Row>
