@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Row,
@@ -8,87 +8,50 @@ import {
   Button,
 } from "react-bootstrap";
 import Img from "../../components/Img/Img";
-import axios from "axios";
 import { useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
+import { register } from "../../helper/loginHelper";
 
 const RegisInputForm2 = () => {
   let params = new URLSearchParams(document.location.search.substring(1));
-  let inputEmail = params.get("email");
-
+  const inputEmail = params.get("email");
+  const history = useHistory();
   const regis2 = Cookies.get("regis2");
+
+  const [inputNamaDepan, setInputNamaDepan] = React.useState("");
+  const [inputNamaBelakang, setInputNamaBelakang] = React.useState("");
+  const [inputPassword, setInputPassword] = React.useState("");
+  const [inputKonfirmasiPassword, setInputKonfirmasiPassword] = useState("");
+
+  const handleInputNamaDepanChange = (e) => {
+    setInputNamaDepan(e.target.value);
+  };
+  const handleInputNamaBelakangChange = (e) => {
+    setInputNamaBelakang(e.target.value);
+  };
+  const handleInputPasswordChange = (e) => {
+    setInputPassword(e.target.value);
+  };
+  const handleInputKonfirmasiPasswordChange = (e) => {
+    setInputKonfirmasiPassword(e.target.value);
+  };
+
+  const tombolDaftar = async () => {
+    await register(
+      inputNamaDepan,
+      inputNamaBelakang,
+      inputEmail,
+      inputPassword,
+      inputKonfirmasiPassword,
+      history
+    );
+  };
+
   useEffect(() => {
     if (regis2 !== inputEmail) {
       history.push("/register");
     }
   });
-
-  const [inputNamaDepan, setInputNamaDepan] = React.useState("");
-  const [inputNamaBelakang, setInputNamaBelakang] = React.useState("");
-  const [inputPassword, setInputPassword] = React.useState("");
-  const [inputKonfirmasiPassword, setInputKonfirmasiPassword] =
-    React.useState("");
-
-  let history = useHistory();
-  const link = "/register/3?email=" + inputEmail;
-
-  function handleInputNamaDepanChange(event) {
-    setInputNamaDepan(event.target.value);
-  }
-  function handleInputNamaBelakangChange(event) {
-    setInputNamaBelakang(event.target.value);
-  }
-  function handleInputPasswordChange(event) {
-    setInputPassword(event.target.value);
-  }
-  function handleInputKonfirmasiPasswordChange(event) {
-    setInputKonfirmasiPassword(event.target.value);
-  }
-
-  function letterCounter(x) {
-    return x.replace(/[^a-zA-Z]/g, "").length;
-  }
-
-  function tombolDaftar() {
-    if (inputNamaDepan === "") {
-      alert("Kolom nama depan tidak boleh kosong");
-    } else if (inputNamaBelakang === "") {
-      alert("Kolom nama belakang tidak boleh kosong");
-    } else if (inputPassword === "") {
-      alert("Kolom password tidak boleh kosong");
-    } else if (letterCounter(inputPassword) < 8) {
-      alert("Minimal karakter password adalah 8");
-    } else if (inputKonfirmasiPassword === "") {
-      alert("Kolom konfirmasi password tidak boleh kosong");
-    } else if (inputPassword !== inputKonfirmasiPassword) {
-      alert("Kolom password dan konfirmasi password tidak sama");
-    } else if (!document.getElementById("radio-sk").checked) {
-      alert("Harus menyetujui syarat dan ketentuan yodamobi");
-    } else {
-      const data = {
-        name: inputNamaDepan + " " + inputNamaBelakang,
-        email: inputEmail,
-        password: inputPassword,
-        password_confirmation: inputKonfirmasiPassword,
-        phone_number: "081234567890",
-      };
-      const headers = {
-        Accept: "application/json",
-      };
-      axios
-        .post("https://yodacentral.herokuapp.com/api/register", data, {
-          headers,
-        })
-        .then((response) => {
-          Cookies.remove("regis2");
-          Cookies.set("regis3", 1);
-          history.push(link);
-        })
-        .catch((error) => {
-          console.error(error.response.data.errors);
-        });
-    }
-  }
 
   return (
     <Container className="con">

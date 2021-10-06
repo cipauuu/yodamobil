@@ -1,55 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, InputGroup, FormControl, Button } from "react-bootstrap";
 import Img from "../../components/Img/Img";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import Cookies from 'js-cookie'
 import { useHistory } from "react-router-dom";
+import { login } from "../../helper/loginHelper";
 
 const LoginInputForm = () => {
   let history = useHistory();
 
-  const [inputEmail, setInputEmail] = React.useState("");
-  const [inputPassword, setInputPassword] = React.useState("");
+  const [inputEmail, setInputEmail] = useState("");
+  const [inputPassword, setInputPassword] = useState("");
 
-  function handleInputEmailChange(event) {
-    setInputEmail(event.target.value);
-  }
-  function handleInputPasswordChange(event) {
-    setInputPassword(event.target.value);
-  }
+  const handleInputEmailChange = (e) => {
+    setInputEmail(e.target.value);
+  };
+  const handleInputPasswordChange = (e) => {
+    setInputPassword(e.target.value);
+  };
 
-  function clearPassword() {
-    setInputPassword("");
-  }
-
-  function tombolLogin() {
-    if (inputEmail === "") {
-      alert("Kolom email tidak boleh kosong");
-    } else if (inputPassword === "") {
-      alert("Kolom password tidak boleh kosong");
-    } else {
-      const data = {
-        email: inputEmail,
-        password: inputPassword,
-      };
-      const headers = {
-        Accept: "application/json",
-      };
-      axios
-        .post("https://yodacentral.herokuapp.com/api/login", data, {
-          headers,
-        })
-        .then((response) => {
-          Cookies.set('token', response.data.token);
-          history.push("/");
-        })
-        .catch((error) => {
-          //error.response.data.message
-          alert("Kombinasi email dan password salah")
-        });
-    }
-  }
+  const tombolLogin = async () => {
+    await login(inputEmail, inputPassword, history);
+  };
 
   return (
     <Container className="con">
@@ -80,7 +51,7 @@ const LoginInputForm = () => {
           <InputGroup.Text>
             <Img
               src="/assets/ic_clear.svg"
-              onClick={clearPassword}
+              onClick={() => setInputPassword("")}
               className="clear-pass"
             />
           </InputGroup.Text>

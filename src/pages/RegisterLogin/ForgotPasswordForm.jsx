@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Row,
@@ -9,67 +9,19 @@ import {
 } from "react-bootstrap";
 import Img from "../../components/Img/Img";
 import { useHistory } from "react-router-dom";
-import axios from "axios";
-import Cookies from "js-cookie";
+import { forgotPass } from "../../helper/loginHelper";
 
 const ForgotPasswordForm = () => {
-  const [inputEmail, setInputEmail] = React.useState("");
+  const history = useHistory();
+  const [inputEmail, setInputEmail] = useState("");
 
-  function handleInputEmailChange(event) {
-    setInputEmail(event.target.value);
-  }
+  const handleInputEmailChange = (e) => {
+    setInputEmail(e.target.value);
+  };
 
-  let history = useHistory();
-
-  function tombolLupaPass() {
-    if (inputEmail === "") {
-      alert("Kolom email tidak boleh kosong");
-    } else {
-      const data = {
-        email: inputEmail,
-      };
-      const headers = {
-        Accept: "application/json",
-      };
-      axios
-        .post("https://yodacentral.herokuapp.com/api/check-email", data, {
-          headers,
-        })
-        .then((response) => {
-          if (response.data.meesage === "Email Not Registered") {
-            alert("Email tidak terdaftar");
-          }
-        })
-        .catch((error) => {
-          if (
-            error.response.data.message === "Email Registered" ||
-            error.response.data.message === null
-          ) {
-            apiForgotPass();
-          }
-        });
-    }
-  }
-
-  function apiForgotPass() {
-    const data = {
-      email: inputEmail,
-    };
-    const headers = {
-      Accept: "application/json",
-    };
-    axios
-      .post("https://yodacentral.herokuapp.com/api/forgot-password", data, {
-        headers,
-      })
-      .then((response) => {
-        if (response.data.message === "Reset Password Email sent.") {
-          alert("Email untuk reset password telah terkirim");
-          Cookies.set("forgotpass2", 1);
-          history.push("/forgot-password/2");
-        }
-      });
-  }
+  const tombolLupaPass = async () => {
+    await forgotPass(inputEmail, history);
+  };
 
   return (
     <Container className="text-center con">

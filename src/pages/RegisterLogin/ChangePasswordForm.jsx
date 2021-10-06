@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Row,
@@ -9,42 +9,19 @@ import {
 } from "react-bootstrap";
 import Img from "../../components/Img/Img";
 import { useHistory } from "react-router-dom";
-import axios from "axios";
+import { forgotPass2 } from "../../helper/loginHelper";
 
 const ChangePasswordForm = () => {
-  const [inputEmail, setInputEmail] = React.useState("");
+  const [inputEmail, setInputEmail] = useState("");
+  const history = useHistory();
 
-  function handleInputEmailChange(event) {
-    setInputEmail(event.target.value);
-  }
+  const handleInputEmailChange = (e) => {
+    setInputEmail(e.target.value);
+  };
 
-  let history = useHistory();
-
-  function tombolLupaPass() {
-    const data = {
-      email: inputEmail,
-    };
-    const headers = {
-      Accept: "application/json",
-    };
-    axios
-      .post("https://yodacentral.herokuapp.com/api/check-email", data, {
-        headers,
-      })
-      .then((response) => {
-        if (response.data.meesage === "Email Not Registered") {
-          alert("Email tidak terdaftar");
-        }
-      })
-      .catch((error) => {
-        if (
-          error.response.data.message === "Email Registered" ||
-          error.response.data.message === null
-        ) {
-          history.push("/");
-        }
-      });
-  }
+  const tombolLupaPass = () => {
+    forgotPass2(inputEmail, history);
+  };
 
   return (
     <Container className="text-center con">

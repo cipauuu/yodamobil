@@ -1,52 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, InputGroup, FormControl, Button } from "react-bootstrap";
 import Img from "../../components/Img/Img";
 import { useHistory } from "react-router-dom";
-import axios from "axios";
-import Cookies from "js-cookie";
+import { checkEmail } from "../../helper/loginHelper";
 
 const RegisInputForm1 = () => {
-  const [inputEmail, setInputEmail] = React.useState("");
+  const history = useHistory();
+  const [inputEmail, setInputEmail] = useState("");
 
-  function handleInputEmailChange(event) {
-    setInputEmail(event.target.value);
-  }
+  const handleInputEmailChange = (e) => {
+    setInputEmail(e.target.value);
+  };
 
-  let history = useHistory();
-  const link = "/register/2?email=" + inputEmail;
-
-  function nextStep() {
-    if (inputEmail === "") {
-      alert("Kolom email tidak boleh kosong");
-    } else if (!document.getElementById("radio-sk").checked) {
-      alert("Harus menyetujui syarat dan ketentuan yodamobi");
-    } else {
-      const data = {
-        email: inputEmail,
-      };
-      const headers = {
-        Accept: "application/json",
-      };
-      axios
-        .post("https://yodacentral.herokuapp.com/api/check-email", data, {
-          headers,
-        })
-        .then((response) => {
-          if (response.data.meesage === "Email Not Registered") {
-            Cookies.set("regis2", inputEmail);
-            history.push(link);
-          }
-        })
-        .catch((error) => {
-          if (
-            error.response.data.message === "Email Registered" ||
-            error.response.data.message === null
-          ) {
-            alert("Email telah terdaftar");
-          }
-        });
-    }
-  }
+  const nextStep = async () => {
+    await checkEmail(inputEmail, history);
+  };
   return (
     <>
       <Container className="con">

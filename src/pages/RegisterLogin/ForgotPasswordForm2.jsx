@@ -5,13 +5,13 @@ import { useHistory } from "react-router-dom";
 
 const ForgotPasswordForm2 = () => {
   const forgotpass2 = Cookies.get("forgotpass2");
-  let history = useHistory();
-  
+  const history = useHistory();
+
   useEffect(() => {
     if (forgotpass2 !== "1") {
       history.push("/forgot-password");
-    } else{
-      Cookies.remove('forgotpass2')
+    } else {
+      Cookies.remove("forgotpass2");
     }
   });
 
