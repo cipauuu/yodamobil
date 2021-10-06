@@ -6,6 +6,9 @@ import TopHeader from "./TopHeader";
 import styled from "styled-components";
 import LoginInputForm from "./LoginInputForm";
 import ForgotPasswordForm from "./ForgotPasswordForm";
+import ForgotPasswordForm2 from "./ForgotPasswordForm2";
+import ChangePasswordForm from "./ChangePasswordForm";
+import ChangePasswordForm2 from "./ChangePasswordForm2";
 import Mobile from "./Mobile";
 import { useLocation } from "react-router-dom";
 import "./Style.css";
@@ -25,6 +28,9 @@ const Login = () => {
   const location = useLocation().pathname;
   const login = location === "/login" ? true : false;
   const forgotpass = location === "/forgot-password" ? true : false;
+  const forgotpass2 = location === "/forgot-password/2" ? true : false;
+  const changepass = location === "/change-password" ? true : false;
+  const changepass2 = location === "/change-password/2" ? true : false;
 
   return (
     <>
@@ -43,6 +49,12 @@ const Login = () => {
                 <LoginInputForm />
               ) : forgotpass ? (
                 <ForgotPasswordForm />
+              ) : forgotpass2 ? (
+                <ForgotPasswordForm2 />
+              ) : changepass ? (
+                <ChangePasswordForm />
+              ) : changepass2 ? (
+                <ChangePasswordForm2 />
               ) : (
                 ""
               )}

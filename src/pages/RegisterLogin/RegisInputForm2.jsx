@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Container,
   Row,
@@ -10,10 +10,18 @@ import {
 import Img from "../../components/Img/Img";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const RegisInputForm2 = () => {
   let params = new URLSearchParams(document.location.search.substring(1));
   let inputEmail = params.get("email");
+
+  const regis2 = Cookies.get("regis2");
+  useEffect(() => {
+    if (regis2 !== inputEmail) {
+      history.push("/register");
+    }
+  });
 
   const [inputNamaDepan, setInputNamaDepan] = React.useState("");
   const [inputNamaBelakang, setInputNamaBelakang] = React.useState("");
@@ -54,6 +62,8 @@ const RegisInputForm2 = () => {
       alert("Kolom konfirmasi password tidak boleh kosong");
     } else if (inputPassword !== inputKonfirmasiPassword) {
       alert("Kolom password dan konfirmasi password tidak sama");
+    } else if (!document.getElementById("radio-sk").checked) {
+      alert("Harus menyetujui syarat dan ketentuan yodamobi");
     } else {
       const data = {
         name: inputNamaDepan + " " + inputNamaBelakang,
@@ -70,6 +80,8 @@ const RegisInputForm2 = () => {
           headers,
         })
         .then((response) => {
+          Cookies.remove("regis2");
+          Cookies.set("regis3", 1);
           history.push(link);
         })
         .catch((error) => {
@@ -154,7 +166,7 @@ const RegisInputForm2 = () => {
       </div>
       <div className="flex">
         <div className="flex">
-          <InputGroup.Radio />{" "}
+          <InputGroup.Radio id="radio-sk" />{" "}
           <p className="typo-bold">
             Saya sudah setuju dengan syarat dan ketentuan yodamobi
           </p>

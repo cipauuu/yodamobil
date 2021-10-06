@@ -10,9 +10,8 @@ import {
 import Img from "../../components/Img/Img";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import Cookies from "js-cookie";
 
-const ForgotPasswordForm = () => {
+const ChangePasswordForm = () => {
   const [inputEmail, setInputEmail] = React.useState("");
 
   function handleInputEmailChange(event) {
@@ -22,36 +21,6 @@ const ForgotPasswordForm = () => {
   let history = useHistory();
 
   function tombolLupaPass() {
-    if (inputEmail === "") {
-      alert("Kolom email tidak boleh kosong");
-    } else {
-      const data = {
-        email: inputEmail,
-      };
-      const headers = {
-        Accept: "application/json",
-      };
-      axios
-        .post("https://yodacentral.herokuapp.com/api/check-email", data, {
-          headers,
-        })
-        .then((response) => {
-          if (response.data.meesage === "Email Not Registered") {
-            alert("Email tidak terdaftar");
-          }
-        })
-        .catch((error) => {
-          if (
-            error.response.data.message === "Email Registered" ||
-            error.response.data.message === null
-          ) {
-            apiForgotPass();
-          }
-        });
-    }
-  }
-
-  function apiForgotPass() {
     const data = {
       email: inputEmail,
     };
@@ -59,14 +28,20 @@ const ForgotPasswordForm = () => {
       Accept: "application/json",
     };
     axios
-      .post("https://yodacentral.herokuapp.com/api/forgot-password", data, {
+      .post("https://yodacentral.herokuapp.com/api/check-email", data, {
         headers,
       })
       .then((response) => {
-        if (response.data.message === "Reset Password Email sent.") {
-          alert("Email untuk reset password telah terkirim");
-          Cookies.set("forgotpass2", 1);
-          history.push("/forgot-password/2");
+        if (response.data.meesage === "Email Not Registered") {
+          alert("Email tidak terdaftar");
+        }
+      })
+      .catch((error) => {
+        if (
+          error.response.data.message === "Email Registered" ||
+          error.response.data.message === null
+        ) {
+          history.push("/");
         }
       });
   }
@@ -80,10 +55,9 @@ const ForgotPasswordForm = () => {
             alt=""
             style={{ marginTop: "15vh" }}
           />
-          <p className="judul" style={{ fontSize: "28px" }}>
-            Lupa password Anda?
+          <p className="judul mb-4" style={{ fontSize: "28px" }}>
+            Ubah kata sandi Anda
           </p>
-          <p className="sub-judul">Masukan detail untuk melanjutkan</p>
         </Col>
       </Row>
       <div className="wrapper">
@@ -107,4 +81,4 @@ const ForgotPasswordForm = () => {
   );
 };
 
-export default ForgotPasswordForm;
+export default ChangePasswordForm;

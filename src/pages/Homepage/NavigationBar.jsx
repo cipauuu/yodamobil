@@ -1,16 +1,16 @@
-import React, {useEffect} from "react";
+import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 
 const NavigationBar = () => {
-  const token = Cookies.get("token");
+  // const token = Cookies.get("token");
 
-  useEffect(() => {
-    if((token === "") || (token === undefined) || (token === null)){
-      document.getElementById("daftar").style.display = "none";
-    }
-  });
+  // useEffect(() => {
+  //   if((token === "") || (token === undefined) || (token === null)){
+  //     document.getElementById("daftar").style.display = "none";
+  //   }
+  // });
 
   return (
     <Navbar bg="white" expand="lg">

@@ -3,6 +3,7 @@ import { Container, InputGroup, FormControl, Button } from "react-bootstrap";
 import Img from "../../components/Img/Img";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import Cookies from "js-cookie";
 
 const RegisInputForm1 = () => {
   const [inputEmail, setInputEmail] = React.useState("");
@@ -17,6 +18,8 @@ const RegisInputForm1 = () => {
   function nextStep() {
     if (inputEmail === "") {
       alert("Kolom email tidak boleh kosong");
+    } else if (!document.getElementById("radio-sk").checked) {
+      alert("Harus menyetujui syarat dan ketentuan yodamobi");
     } else {
       const data = {
         email: inputEmail,
@@ -30,6 +33,7 @@ const RegisInputForm1 = () => {
         })
         .then((response) => {
           if (response.data.meesage === "Email Not Registered") {
+            Cookies.set("regis2", inputEmail);
             history.push(link);
           }
         })
@@ -63,7 +67,7 @@ const RegisInputForm1 = () => {
         </div>
         <div className="flex">
           <div className="flex">
-            <InputGroup.Radio />{" "}
+            <InputGroup.Radio id="radio-sk" />{" "}
             <p className="typo-bold">
               Saya sudah setuju dengan syarat dan ketentuan yodamobi
             </p>

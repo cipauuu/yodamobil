@@ -15,6 +15,9 @@ function App() {
           <Route path="/" exact component={Homepage} />
           <Route path="/login" exact component={Login} />
           <Route path="/forgot-password" exact component={Login} />
+          <Route path="/forgot-password/2" exact component={Login} />
+          <Route path="/change-password" exact component={Login} />
+          <Route path="/change-password/2" exact component={Login} />
           <Route path="/register" exact component={Register} />
           <Route path="/register/2" exact component={Register} />
           <Route path="/register/3" exact component={Register} />
