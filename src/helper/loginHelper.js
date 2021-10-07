@@ -1,9 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const letterCounter = (x) => {
-  return x.replace(/[^a-zA-Z]/g, "").length;
-};
+const passReq = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
 
 export const login = (inputEmail, inputPassword, history) => {
   if (inputEmail === "") {
@@ -160,8 +158,8 @@ export const register = (
     alert("Kolom nama belakang tidak boleh kosong");
   } else if (inputPassword === "") {
     alert("Kolom password tidak boleh kosong");
-  } else if (letterCounter(inputPassword) < 8) {
-    alert("Minimal karakter password adalah 8");
+  } else if (passReq.test(inputPassword) === false) {
+    alert("Password harus terdiri dari minimal 8 karakter, 1 buah huruf besar, 1 buah huruf kecil, dan angka");
   } else if (inputKonfirmasiPassword === "") {
     alert("Kolom konfirmasi password tidak boleh kosong");
   } else if (inputPassword !== inputKonfirmasiPassword) {

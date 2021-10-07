@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Container, InputGroup, FormControl, Button } from "react-bootstrap";
 import Img from "../../components/Img/Img";
-import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { login } from "../../helper/loginHelper";
 
 const LoginInputForm = () => {
